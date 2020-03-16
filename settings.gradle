@@ -1,0 +1,2 @@
+rootProject.name='Image Upload'
+include ':app'

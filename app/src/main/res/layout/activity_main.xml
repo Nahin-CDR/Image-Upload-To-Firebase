@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="Select Image"
+        android:src="@drawable/image_defaut"
+        android:scaleType="centerCrop"
+        android:id="@+id/image_id"/>
+
+    <EditText
+        android:id="@+id/inputImageNameID"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        />
+    <Button
+        android:id="@+id/choose_button_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image Here"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="false"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+        android:id="@+id/upload_Button_id"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Image"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="false"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Uploads"
+        android:layout_gravity="end"
+        />
+
+</LinearLayout>

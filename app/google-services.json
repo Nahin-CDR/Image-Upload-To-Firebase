@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1075482533137",
+    "firebase_url": "https://image-upload-8af0f.firebaseio.com",
+    "project_id": "image-upload-8af0f",
+    "storage_bucket": "image-upload-8af0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075482533137:android:ba553bbef79553769380b0",
+        "android_client_info": {
+          "package_name": "com.nahin.imageupload"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075482533137-qshv82dejrshr9oq9f8aicjp54mfukji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAqSwxiUDvaKyUFA4oavvVll63GUW4PQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075482533137-qshv82dejrshr9oq9f8aicjp54mfukji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
