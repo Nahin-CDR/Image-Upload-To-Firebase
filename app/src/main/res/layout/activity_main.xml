@@ -43,9 +43,11 @@
 
 
     <TextView
+        android:id="@+id/showUploadsID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show Uploads"
+        android:clickable="true"
         android:layout_gravity="end"
         />
 

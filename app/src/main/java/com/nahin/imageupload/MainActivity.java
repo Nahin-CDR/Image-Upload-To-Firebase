@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private StorageReference mstorageRef;
     private DatabaseReference databaseReference;
 
+    private TextView showUploads;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -57,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
 
         imageName = (EditText)findViewById( R.id.inputImageNameID );
 
+        showUploads = (TextView)findViewById( R.id.showUploadsID );
+        showUploads.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getApplicationContext(),ImageShower.class );
+                startActivity( intent );
+            }
+        } );
 
         mstorageRef = FirebaseStorage.getInstance().getReference("uploads");
         databaseReference = FirebaseDatabase.getInstance().getReference("uploads");
@@ -94,12 +105,6 @@ public class MainActivity extends AppCompatActivity {
             //Toast.makeText( this, "You Haven't Picked Images", Toast.LENGTH_SHORT ).show();
         }
     }
-//
-//    private String getFileExtension(Uri uri){
-//        ContentResolver cr = getContentResolver();
-//        MimeTypeMap mime = MimeTypeMap.getSingleton();
-//        return mime.getExtensionFromMimeType( cr.getType( uri ) );
-//    }
 
     private void uploadFile() {
         String foldername = "Image";
@@ -183,7 +188,6 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat dateformat = new SimpleDateFormat("dd-MMM-yyyy,hh:mm:ss aa");
         String datetime = dateformat.format(c.getTime());
 
-       // String mydate = DateFormat.getDateInstance().format( Calendar.getInstance().getTime() );
         FirebaseDatabase.getInstance().getReference("Nahin")
                 .child( datetime ).setValue( upload ).addOnCompleteListener( new OnCompleteListener<Void>() {
             @Override
